@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STOP&thinsp;DRUGS｜Kota</title>
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <div id="js-mouse-stalker" class="c-mouse-stalker"></div>
+
+  <header class="l-header">
+    <div class="l-header__inner">
+      
+      <h1 class="l-header__logo">
+        <a href="index.html">
+          <span class="l-header__logo-main">窓鳥</span>
+          <span class="l-header__logo-sub">MADORI</span>
+        </a>
+      </h1>
+
+      <nav class="p-global-nav" aria-label="メインナビゲーション">
+        <ul class="p-global-nav__pc-list">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="works.html" class="is-current">WORKS</a></li>
+          <li><a href="photo.html">PHOTO</a></li>
+          <li>
+            <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-label="Instagram"></i>
+            </a>
+          </li>
+<!-- ナビゲーション内の検索フォーム -->
+          <li class="p-global-nav__search">
+            <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+            <form class="search-form" action="search.html" method="get">
+              <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+              <input type="text" name="q" class="search-input" placeholder="Search..." required>
+              <button type="submit" class="search-button">
+                <i class="fas fa-search" aria-label="検索"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+
+        <div id="js-sp-menu" class="p-global-nav__sp-wrapper">
+          <ul class="p-global-nav__sp-list">
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="photo.html">PHOTO</a></li>
+            <li>
+              <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+              </a>
+            </li>
+            <!-- ナビゲーション内の検索フォーム -->
+            <li class="p-global-nav__search">
+              <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+              <form class="search-form" action="search.html" method="get">
+                <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+                <input type="text" name="q" class="search-input" placeholder="Search..." required>
+                <button type="submit" class="search-button">
+                  <i class="fas fa-search" aria-label="検索"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button type="button" id="js-hamburger" class="p-hamburger" aria-controls="js-sp-menu" aria-expanded="false" aria-label="メニューを開閉する">
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="l-main">
+    <article class="p-about l-container--narrow">
+      <div class="p-about__content">
+
+        <!-- メインビジュアル（スライダー） -->
+        <div class="p-about__visual u-fade-in">
+          <ul class="slider">
+            <li><img src="images/works/thumbnail/works-05.webp"></li>
+          </ul>
+        </div>
+
+        <!-- タイトル・メタ情報 -->
+        <div class="p-about__group u-fade-in">
+          <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;">STOP&thinsp;DRUGS</h2>
+          <p style="font-size: 1rem; margin-bottom: 15px;">薬物防止啓発の除菌シートのパッケージデザイン</p>
+          <ul class="p-about__tags p-about__list--muted">
+            <li>#GraphicDesign&nbsp;#PackageDesign</li>
+          </ul>
+        </div>
+
+        <!-- 概要 -->
+        <div class="p-about__group u-fade-in">
+          <h3>概要</h3>
+          <p>薬物防止対策キャンペーンの一環として配布された除菌シートパッケージを個人依頼で制作しました。受け取った人がすぐに捨てず、思わず見入ってしまうような構成を目指し、「親しみやすさの中に潜む恐ろしさ」というギャップをテーマにデザインしました。サイレンと薬のカプセルを組み合わせたモチーフを中心に、赤と黄の警戒色で危険性を瞬時に伝える強いビジュアルを設計しました。</p>
+        </div>
+
+        <!-- 成果物仕様・作品詳細 -->
+        <div class="p-about__group u-fade-in">
+          <h3>成果物仕様</h3>
+          <ul class="p-about__list">
+            <li><strong>除菌シート：</strong>150mm×920mm</li>
+          </ul>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>詳細</h3>
+          <ul class="p-about__list">
+            <li><strong>業務内容：</strong>九州産業大学&thinsp;入試課</li>
+            <li><strong>使用ツール：</strong>Illustrator</li>
+            <li><strong>制作期間：</strong>制作期間：2024.02.14 - 2024.02.31</li>
+          </ul>
+        </div>
+
+        <!-- 本文セクション -->
+        <div class="p-about__group u-fade-in">
+          <h3>デザインA</h3>
+          <div class="p-about__visual">
+            <img src="images/works/stopDrugs/stopdrugs-01.webp">
+          </div>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>デザインB</h3>
+          <div class="p-about__visual">
+            <img src="images/works/stopDrugs/stpdrugs-02.webp">
+          </div>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>関連リンク</h3>
+          <ul class="p-about__list">
+            <li><a href="https://www.kyusan-u.ac.jp/campus/news/campaign20240916/" target="_blank" rel="noopener noreferrer">九州産業大学HP：“学内で薬物等乱用防止キャンペーンを実施しています”
+            </a></li>
+          </ul>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <div class="wrapper">
+    <footer>
+      <p>&copy;2026&nbsp;窓鳥&thinsp;/&thinsp;MADORI</p>
+    </footer>
+  </div>
+
+</body>
+</html>

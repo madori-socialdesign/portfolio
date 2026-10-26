@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>都市高散歩｜Kota</title>
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <div id="js-mouse-stalker" class="c-mouse-stalker"></div>
+
+  <header class="l-header">
+    <div class="l-header__inner">
+      
+      <h1 class="l-header__logo">
+        <a href="index.html">
+          <span class="l-header__logo-main">窓鳥</span>
+          <span class="l-header__logo-sub">MADORI</span>
+        </a>
+      </h1>
+
+      <nav class="p-global-nav" aria-label="メインナビゲーション">
+        <ul class="p-global-nav__pc-list">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="works.html" class="is-current">WORKS</a></li>
+          <li><a href="photo.html">PHOTO</a></li>
+          <li>
+            <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-label="Instagram"></i>
+            </a>
+          </li>
+<!-- ナビゲーション内の検索フォーム -->
+          <li class="p-global-nav__search">
+            <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+            <form class="search-form" action="search.html" method="get">
+              <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+              <input type="text" name="q" class="search-input" placeholder="Search..." required>
+              <button type="submit" class="search-button">
+                <i class="fas fa-search" aria-label="検索"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+
+        <div id="js-sp-menu" class="p-global-nav__sp-wrapper">
+          <ul class="p-global-nav__sp-list">
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="photo.html">PHOTO</a></li>
+            <li>
+              <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+              </a>
+            </li>
+            <!-- ナビゲーション内の検索フォーム -->
+            <li class="p-global-nav__search">
+              <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+              <form class="search-form" action="search.html" method="get">
+                <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+                <input type="text" name="q" class="search-input" placeholder="Search..." required>
+                <button type="submit" class="search-button">
+                  <i class="fas fa-search" aria-label="検索"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button type="button" id="js-hamburger" class="p-hamburger" aria-controls="js-sp-menu" aria-expanded="false" aria-label="メニューを開閉する">
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="l-main">
+    <article class="p-about l-container--narrow">
+      <div class="p-about__content">
+
+        <!-- メインビジュアル（スライダー） -->
+        <div class="p-about__visual u-fade-in">
+          <ul class="slider">
+            <li><img src="images/works/thumbnail/works-06.webp"></li>
+          </ul>
+        </div>
+
+        <!-- タイトル・メタ情報 -->
+        <div class="p-about__group u-fade-in">
+          <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;">都市高散歩</h2>
+          <p style="font-size: 1rem; margin-bottom: 15px;">都市高速の造形美と老朽化の現状を伝える写真集</p>
+          <p style="font-size: 0.85rem; margin-bottom: 15px;"><a href="https://adamay-design.github.io/mutedscapes/" target="_blank" rel="noopener noreferrer">https://adamay-design.github.io/mutedscapes/</a></p>
+          <ul class="p-about__tags p-about__list--muted">
+            <li>#SocialDesign</li>
+            <li>#Photography</li>
+          </ul>
+        </div>
+
+        <!-- 概要 -->
+        <div class="p-about__group u-fade-in">
+          <h3>概要</h3>
+          <p>都市高速の高架に焦点を当て、その造形美と老朽化を写真で記録しました。関心の向きにくい社会問題に対し、写真集という媒体を使用することでハードルを下げることを意識しました。</p>
+        </div>
+
+        <!-- 成果物仕様・作品詳細 -->
+        <div class="p-about__group u-fade-in">
+          <h3>成果物仕様</h3>
+          <ul class="p-about__list">
+            <li><strong>写真集：</strong>210×210mm, 40P</li>
+          </ul>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>作品詳細</h3>
+          <ul class="p-about__list">
+            <li><strong>科目名：</strong>情報デザイン研究</li>
+            <li><strong>使用ツール：</strong>Illustrator, Lightroom</li>
+            <li><strong>制作期間：</strong>2022.04.14 - 2022.12.22</li>
+          </ul>
+        </div>
+
+        <!-- 本文セクション -->
+        <div class="p-about__group u-fade-in">
+          <h3>背景</h3>
+          <p>無機物であるのにどこか有機的な印象を受ける都市高速の造形的な部分に魅力を発見しました。しかし、福岡都市高速には様々な課題も存在します。その中でも目立つのが老朽化問題です。老朽化が特に目立つ点を歩行者視点から捉え、その問題に注目しました。</p>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>目的</h3>
+          <p>本研究の目的は、都市高速の造形美と共に都市高速の老朽化に焦点を当て、社会にその問題を認知してもらうきっかけを作ることです。具体的には、撮影した写真を通じて都市高速の現状を伝え、歩行者視点から老朽化が見えやすい視点を提供することで、社会問題への理解を深めます。最終的には、手に取りやすい形式として写真集を制作しました。</p>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>関連リンク</h3>
+          <ul class="p-about__list">
+            <li><a href="https://drive.google.com/file/d/1XUMzWFO91dWqnlBrDUdgIE5o4wND_krH/view?usp=sharing" target="_blank" rel="noopener noreferrer">都市高散歩 - PDF</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <div class="wrapper">
+    <footer>
+      <p>&copy;2026&nbsp;窓鳥&thinsp;/&thinsp;MADORI</p>
+    </footer>
+  </div>
+
+</body>
+</html>

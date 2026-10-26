@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo｜Kota</title>
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+
+  <link rel="stylesheet" href="./css/luminous-basic.min.css">
+  <script src="./js/luminous.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <div id="js-mouse-stalker" class="c-mouse-stalker"></div>
+
+  <!-- ヘッダー -->
+  <header class="l-header">
+    <div class="l-header__inner">
+      
+      <h1 class="l-header__logo">
+        <a href="index.html">
+          <span class="l-header__logo-main">窓鳥</span>
+          <span class="l-header__logo-sub">MADORI</span>
+        </a>
+      </h1>
+
+      <nav class="p-global-nav" aria-label="メインナビゲーション">
+        <ul class="p-global-nav__pc-list">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="works.html">WORKS</a></li>
+          <li><a href="photo.html" class="is-current">PHOTO</a></li>
+          <li>
+            <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-label="Instagram"></i>
+            </a>
+          </li>
+        <!-- ナビゲーション内の検索フォーム -->
+          <li class="p-global-nav__search">
+            <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+            <form class="search-form" action="search.html" method="get">
+              <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+              <input type="text" name="q" class="search-input" placeholder="Search..." required>
+              <button type="submit" class="search-button">
+                <i class="fas fa-search" aria-label="検索"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+
+        <div id="js-sp-menu" class="p-global-nav__sp-wrapper">
+          <ul class="p-global-nav__sp-list">
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="photo.html">PHOTO</a></li>
+            <li>
+              <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+              </a>
+            </li>
+            <!-- ナビゲーション内の検索フォーム -->
+            <li class="p-global-nav__search">
+              <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+              <form class="search-form" action="search.html" method="get">
+                <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+                <input type="text" name="q" class="search-input" placeholder="Search..." required>
+                <button type="submit" class="search-button">
+                  <i class="fas fa-search" aria-label="検索"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+
+      <button type="button" id="js-hamburger" class="p-hamburger" aria-controls="js-sp-menu" aria-expanded="false" aria-label="メニューを開閉する">
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="l-main">
+    
+    <!-- 中央寄せのためのコンテナを追加 -->
+    <section class="p-gallery l-container">
+      
+      <!-- フィルターボタン（c-btn クラスで統一して美しく） -->
+      <!-- <div class="p-gallery__controls">
+        <button type="button" class="c-btn is-active" data-filter="all">All</button>
+        <button type="button" class="c-btn" data-filter="ILC">ILC</button>
+        <button type="button" class="c-btn" data-filter="iPhone">iPhone</button>
+      </div> -->
+
+      <!-- ギャラリー画像一覧 -->
+      <ul class="p-gallery__grid">
+
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo1.webp" class="js-luminous">
+            <img src="photo/photo1.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo2.webp" class="js-luminous">
+            <img src="photo/photo2.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo3.webp" class="js-luminous">
+            <img src="photo/photo3.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo4.webp" class="js-luminous">
+            <img src="photo/photo4.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo5.webp" class="js-luminous">
+            <img src="photo/photo5.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo6.webp" class="js-luminous">
+            <img src="photo/photo6.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo7.webp" class="js-luminous">
+            <img src="photo/photo7.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo8.webp" class="js-luminous">
+            <img src="photo/photo8.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo9.webp" class="js-luminous">
+            <img src="photo/photo9.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo10.webp" class="js-luminous">
+            <img src="photo/photo10.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo11.webp" class="js-luminous">
+            <img src="photo/photo11.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo12.webp" class="js-luminous">
+            <img src="photo/photo12.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo13.webp" class="js-luminous">
+            <img src="photo/photo13.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo14.webp" class="js-luminous">
+            <img src="photo/photo14.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo15.webp" class="js-luminous">
+            <img src="photo/photo15.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo16.webp" class="js-luminous">
+            <img src="photo/photo16.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo17.webp" class="js-luminous">
+            <img src="photo/photo17.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo18.webp" class="js-luminous">
+            <img src="photo/photo18.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo19.webp" class="js-luminous">
+            <img src="photo/photo19.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo20.webp" class="js-luminous">
+            <img src="photo/photo20.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo21.webp" class="js-luminous">
+            <img src="photo/photo21.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo22.webp" class="js-luminous">
+            <img src="photo/photo22.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo23.webp" class="js-luminous">
+            <img src="photo/photo23.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo24.webp" class="js-luminous">
+            <img src="photo/photo24.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo25.webp" class="js-luminous">
+            <img src="photo/photo25.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo26.webp" class="js-luminous">
+            <img src="photo/photo26.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo27.webp" class="js-luminous">
+            <img src="photo/photo27.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo28.webp" class="js-luminous">
+            <img src="photo/photo28.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo29.webp" class="js-luminous">
+            <img src="photo/photo29.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo30.webp" class="js-luminous">
+            <img src="photo/photo30.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo31.webp" class="js-luminous">
+            <img src="photo/photo31.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo32.webp" class="js-luminous">
+            <img src="photo/photo32.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo33.webp" class="js-luminous">
+            <img src="photo/photo33.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo34.webp" class="js-luminous">
+            <img src="photo/photo34.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo35.webp" class="js-luminous">
+            <img src="photo/photo35.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo36.webp" class="js-luminous">
+            <img src="photo/photo36.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo37.webp" class="js-luminous">
+            <img src="photo/photo37.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo38.webp" class="js-luminous">
+            <img src="photo/photo38.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo39.webp" class="js-luminous">
+            <img src="photo/photo39.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo40.webp" class="js-luminous">
+            <img src="photo/photo40.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo41.webp" class="js-luminous">
+            <img src="photo/photo41.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo42.webp" class="js-luminous">
+            <img src="photo/photo42.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo43.webp" class="js-luminous">
+            <img src="photo/photo43.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo44.webp" class="js-luminous">
+            <img src="photo/photo44.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo45.webp" class="js-luminous">
+            <img src="photo/photo45.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo46.webp" class="js-luminous">
+            <img src="photo/photo46.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo47.webp" class="js-luminous">
+            <img src="photo/photo47.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo48.webp" class="js-luminous">
+            <img src="photo/photo48.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo49.webp" class="js-luminous">
+            <img src="photo/photo49.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo50.webp" class="js-luminous">
+            <img src="photo/photo50.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo51.webp" class="js-luminous">
+            <img src="photo/photo51.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo52.webp" class="js-luminous">
+            <img src="photo/photo52.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo53.webp" class="js-luminous">
+            <img src="photo/photo53.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo54.webp" class="js-luminous">
+            <img src="photo/photo54.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo55.webp" class="js-luminous">
+            <img src="photo/photo55.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo56.webp" class="js-luminous">
+            <img src="photo/photo56.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo57.webp" class="js-luminous">
+            <img src="photo/photo57.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo58.webp" class="js-luminous">
+            <img src="photo/photo58.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo59.webp" class="js-luminous">
+            <img src="photo/photo59.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo60.webp" class="js-luminous">
+            <img src="photo/photo60.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo61.webp" class="js-luminous">
+            <img src="photo/photo61.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo62.webp" class="js-luminous">
+            <img src="photo/photo62.webp">
+          </a>
+        </li>
+        <li class="js-gallery-item" data-category="">
+          <a href="photo/photo63.webp" class="js-luminous">
+            <img src="photo/photo63.webp">
+          </a>
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <div class="wrapper">
+    <footer>
+      <p>&copy;2026&nbsp;窓鳥&thinsp;/&thinsp;MADORI</p>
+    </footer>
+  </div>
+  
+</body>
+</html>

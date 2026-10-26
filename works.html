@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works｜Kota</title>
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <div id="js-mouse-stalker" class="c-mouse-stalker"></div>
+
+  <header class="l-header">
+    <div class="l-header__inner">
+      
+      <h1 class="l-header__logo">
+        <a href="index.html">
+          <span class="l-header__logo-main">窓鳥</span>
+          <span class="l-header__logo-sub">MADORI</span>
+        </a>
+      </h1>
+
+      <nav class="p-global-nav" aria-label="メインナビゲーション">
+        <ul class="p-global-nav__pc-list">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="works.html" class="is-current">WORKS</a></li>
+          <li><a href="photo.html">PHOTO</a></li>
+          <li>
+            <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-label="Instagram"></i>
+            </a>
+          </li>
+<!-- ナビゲーション内の検索フォーム -->
+          <li class="p-global-nav__search">
+            <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+            <form class="search-form" action="search.html" method="get">
+              <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+              <input type="text" name="q" class="search-input" placeholder="Search..." required>
+              <button type="submit" class="search-button">
+                <i class="fas fa-search" aria-label="検索"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+
+        <div id="js-sp-menu" class="p-global-nav__sp-wrapper">
+          <ul class="p-global-nav__sp-list">
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="photo.html">PHOTO</a></li>
+            <li>
+              <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+              </a>
+            </li>
+            <!-- ナビゲーション内の検索フォーム -->
+            <li class="p-global-nav__search">
+              <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+              <form class="search-form" action="search.html" method="get">
+                <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+                <input type="text" name="q" class="search-input" placeholder="Search..." required>
+                <button type="submit" class="search-button">
+                  <i class="fas fa-search" aria-label="検索"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button type="button" id="js-hamburger" class="p-hamburger" aria-controls="js-sp-menu" aria-expanded="false" aria-label="メニューを開閉する">
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+<main class="l-main">
+    
+<div class="p-works l-container">
+      
+      <ul class="p-works__grid">
+
+        <li class="p-works__item">
+          <a href="fenestralism.html" class="p-works__card">
+            <img src="images/works/thumbnail/works-07.webp" class="p-works__image">
+            <div class="p-works__mask">
+              <div class="p-works__caption">
+                <p class="p-works__title">Fenestralism（2026）</p>
+                <p class="p-works__subtitle">「窓的思考」による曖昧さの価値の再考</p>
+                <p class="p-works__category">#SocialDesign</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="p-works__item">
+          <a href="mutedscapes.html" class="p-works__card">
+            <img src="images/works/thumbnail/works-01.webp" class="p-works__image">
+            <div class="p-works__mask">
+              <div class="p-works__caption">
+                <p class="p-works__title">Mutedscapes（2024）</p>
+                <p class="p-works__subtitle">窓ガラスに映る時間軸と空間を記録・表現するWebサイト</p>
+                <p class="p-works__category">#SocialDesign</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="p-works__item">
+          <a href="toshikosampo.html" class="p-works__card">
+            <img src="images/works/thumbnail/works-06.webp" class="p-works__image">
+            <div class="p-works__mask">
+              <div class="p-works__caption">
+                <p class="p-works__title">都市高散歩（2023）</p>
+                <p class="p-works__subtitle">都市高速の造形美と老朽化の現状を伝える写真集</p>
+                <p class="p-works__category">#SocialDesign</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="p-works__item">
+          <a href="michieda-promo.html" class="p-works__card">
+            <img src="images/works/thumbnail/works-02.webp" class="p-works__image">
+            <div class="p-works__mask">
+              <div class="p-works__caption">
+                <p class="p-works__title">ミチエダ&thinsp;宣材写真（2025）</p>
+                <p class="p-works__subtitle">社会人お笑いコンビ「ミチエダ」の宣材撮影</p>
+                <p class="p-works__category">#Photography</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        
+        <li class="p-works__item">
+          <a href="stopdrugs.html" class="p-works__card">
+            <img src="images/works/thumbnail/works-05.webp" class="p-works__image">
+            <div class="p-works__mask">
+              <div class="p-works__caption">
+                <p class="p-works__title">STOP&thinsp;DRUGS（2024）</p>
+                <p class="p-works__subtitle">薬物防止対策キャンペーン除菌シート</p>
+                <p class="p-works__category">#GraphicDesign</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="p-works__item">
+          <a href="univ-admission.html" class="p-works__card">
+            <img src="images/works/thumbnail/works-03.webp"  class="p-works__image">
+            <div class="p-works__mask">
+              <div class="p-works__caption">
+                <p class="p-works__title">大学&thinsp;入試関連冊子（2024）</p>
+                <p class="p-works__subtitle">九州産業大学&thinsp;入試ガイドと募集要項の編集・入稿業務</p>
+                <p class="p-works__category">#DeskTopPublishing</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="p-works__item">
+          <a href="grassyhouse.html" class="p-works__card">
+            <img src="images/works/thumbnail/works-04.webp" class="p-works__image">
+            <div class="p-works__mask">
+              <div class="p-works__caption">
+                <p class="p-works__title">Grassy&thinsp;House（2023）</p>
+                <p class="p-works__subtitle"></p>
+                <p class="p-works__category">#3DCG</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li class="p-works__item">
+          <a href="buildingduck.html" class="p-works__card">
+            <img src="images/works/thumbnail/works-08.webp" class="p-works__image">
+            <div class="p-works__mask">
+              <div class="p-works__caption">
+                <p class="p-works__title">Building&thinsp;Duck（2023）</p>
+                <p class="p-works__category">#3DCG</p>
+              </div>
+            </div>
+
+          </a>
+        </li>
+
+      </ul>
+      
+    </div>
+
+  </main>
+
+  <div class="wrapper">
+    <footer>
+      <p>&copy;2026&nbsp;窓鳥&thinsp;/&thinsp;MADORI</p>
+    </footer>
+  </div>
+
+</body>
+</html>
