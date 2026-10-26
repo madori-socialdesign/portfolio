@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ミチエダ&thinsp;宣材写真｜Kota</title>
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+
+  <link rel="stylesheet" href="./css/luminous-basic.min.css">
+  <script src="./js/luminous.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <div id="js-mouse-stalker" class="c-mouse-stalker"></div>
+
+  <header class="l-header">
+    <div class="l-header__inner">
+      
+      <h1 class="l-header__logo">
+        <a href="index.html">
+          <span class="l-header__logo-main">窓鳥</span>
+          <span class="l-header__logo-sub">MADORI</span>
+        </a>
+      </h1>
+
+      <nav class="p-global-nav" aria-label="メインナビゲーション">
+        <ul class="p-global-nav__pc-list">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="works.html" class="is-current">WORKS</a></li>
+          <li><a href="photo.html">PHOTO</a></li>
+          <li>
+            <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-label="Instagram"></i>
+            </a>
+          </li>
+<!-- ナビゲーション内の検索フォーム -->
+          <li class="p-global-nav__search">
+            <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+            <form class="search-form" action="search.html" method="get">
+              <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+              <input type="text" name="q" class="search-input" placeholder="Search..." required>
+              <button type="submit" class="search-button">
+                <i class="fas fa-search" aria-label="検索"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+
+        <div id="js-sp-menu" class="p-global-nav__sp-wrapper">
+          <ul class="p-global-nav__sp-list">
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="photo.html">PHOTO</a></li>
+            <li>
+              <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+              </a>
+            </li>
+            <!-- ナビゲーション内の検索フォーム -->
+            <li class="p-global-nav__search">
+              <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+              <form class="search-form" action="search.html" method="get">
+                <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+                <input type="text" name="q" class="search-input" placeholder="Search..." required>
+                <button type="submit" class="search-button">
+                  <i class="fas fa-search" aria-label="検索"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button type="button" id="js-hamburger" class="p-hamburger" aria-controls="js-sp-menu" aria-expanded="false" aria-label="メニューを開閉する">
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="l-main">
+    <article class="p-about l-container--narrow">
+      <div class="p-about__content">
+
+        <!-- メインビジュアル（スライダー） -->
+        <div class="p-about__visual u-fade-in">
+          <ul class="slider">
+            <li><img src="images/works/thumbnail/works-02.webp"></li>
+          </ul>
+        </div>
+
+        <!-- タイトル・メタ情報 -->
+        <div class="p-about__group u-fade-in">
+          <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;">ミチエダ&thinsp;宣材写真</h2>
+          <p style="font-size: 1rem; margin-bottom: 15px;">社会人お笑いコンビ「ミチエダ」の宣材撮影</p>
+          <ul class="p-about__tags p-about__list--muted">
+            <li>#Photography</li>
+          </ul>
+        </div>
+
+        <!-- 概要 -->
+        <div class="p-about__group u-fade-in">
+          <h3>概要</h3>
+          <p>社会人お笑いコンビ「ミチエダ」から依頼を受けて、宣材写真の撮影しました。ミチエダが出演するイベントの広報で使用されています。</p>
+        </div>
+
+        <!-- 画像一覧（2列グリッド形式） -->
+        <div class="p-about__visual u-fade-in">
+          <ul class="p-gallery__grid p-gallery__grid--2col">
+            <li class="js-gallery-item" data-category="Michieda">
+              <a href="images/works/michieda/michieda1.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda1.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Michieda">
+              <a href="images/works/michieda/michieda2.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda2.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Michieda">
+              <a href="images/works/michieda/michieda3.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda3.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Michieda">
+              <a href="images/works/michieda/michieda4.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda4.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Mihara">
+              <a href="images/works/michieda/michieda5.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda5.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Mihara">
+              <a href="images/works/michieda/michieda6.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda6.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Mihara">
+              <a href="images/works/michieda/michieda7.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda7.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Mihara">
+              <a href="images/works/michieda/michieda8.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda8.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Mihara">
+              <a href="images/works/michieda/michieda9.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda9.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Mihara">
+              <a href="images/works/michieda/michieda10.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda10.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Mihara">
+              <a href="images/works/michieda/michieda11.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda11.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Ryudo">
+              <a href="images/works/michieda/michieda12.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda12.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Ryudo">
+              <a href="images/works/michieda/michieda13.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda13.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Ryudo">
+              <a href="images/works/michieda/michieda14.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda14.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Ryudo">
+              <a href="images/works/michieda/michieda15.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda15.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Ryudo">
+              <a href="images/works/michieda/michieda16.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda16.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Ryudo">
+              <a href="images/works/michieda/michieda17.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda17.webp" alt="">
+              </a>
+            </li>
+            <li class="js-gallery-item" data-category="Ryudo">
+              <a href="images/works/michieda/michieda18.webp" class="js-luminous" data-title="">
+                <img src="images/works/michieda/michieda18.webp" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>撮影情報</h3>
+          <ul class="p-about__list">
+            <li><strong>撮影機材：</strong>Sony α7Ⅲ</li>
+            <li><strong>使用ツール：</strong>Photoshop, Lightroom Classic</li>
+            <li><strong>撮影日：</strong>2025.09.07</li>
+          </ul>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>関連リンク</h3>
+          <p><strong>ミチエダ</strong>：<a href="https://stand.fm/channels/60210faf85b142d0d81cfd33" target="_blank" rel="nofollow">stand.fm</a></p>
+          <p><strong>龍道</strong>：<a href="https://www.instagram.com/michieda_ryudo" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a>&nbsp;<a href="https://x.com/michieda_ryudo" target="_blank" rel="nofollow"><i class="fab fa-x-twitter"></i></a></p>
+          <p><strong>みはら</strong>：<a href="https://www.instagram.com/michieda_mihara" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a>&nbsp;<a href="https://x.com/michieda_mihara" target="_blank" rel="nofollow"><i class="fab fa-x-twitter"></i></a></p>
+        </div>    
+
+      </div>
+    </article>
+  </main>
+
+  <div class="wrapper">
+    <footer>
+      <p>&copy;2026&nbsp;窓鳥&thinsp;/&thinsp;MADORI</p>
+    </footer>
+  </div>
+
+</body>
+</html>

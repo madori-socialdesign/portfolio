@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building&thinsp;Duck｜Kota</title>
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <div id="js-mouse-stalker" class="c-mouse-stalker"></div>
+
+  <header class="l-header">
+    <div class="l-header__inner">
+      
+      <h1 class="l-header__logo">
+        <a href="index.html">
+          <span class="l-header__logo-main">窓鳥</span>
+          <span class="l-header__logo-sub">MADORI</span>
+        </a>
+      </h1>
+
+      <nav class="p-global-nav" aria-label="メインナビゲーション">
+        <ul class="p-global-nav__pc-list">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="works.html" class="is-current">WORKS</a></li>
+          <li><a href="photo.html">PHOTO</a></li>
+          <li>
+            <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-label="Instagram"></i>
+            </a>
+          </li>
+          <!-- ナビゲーション内の検索フォーム -->
+          <li class="p-global-nav__search">
+            <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+            <form class="search-form" action="search.html" method="get">
+              <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+              <input type="text" name="q" class="search-input" placeholder="Search..." required>
+              <button type="submit" class="search-button">
+                <i class="fas fa-search" aria-label="検索"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+
+        <div id="js-sp-menu" class="p-global-nav__sp-wrapper">
+          <ul class="p-global-nav__sp-list">
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="photo.html">PHOTO</a></li>
+            <li>
+              <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+              </a>
+            </li>
+            <!-- ナビゲーション内の検索フォーム -->
+            <li class="p-global-nav__search">
+              <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+              <form class="search-form" action="search.html" method="get">
+                <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+                <input type="text" name="q" class="search-input" placeholder="Search..." required>
+                <button type="submit" class="search-button">
+                  <i class="fas fa-search" aria-label="検索"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button type="button" id="js-hamburger" class="p-hamburger" aria-controls="js-sp-menu" aria-expanded="false" aria-label="メニューを開閉する">
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="l-main">
+    <article class="p-about l-container--narrow">
+      <div class="p-about__content">
+
+        <!-- メインビジュアル（スライダー） -->
+        <div class="p-about__visual u-fade-in">
+          <ul class="slider">
+            <div class="p-about__visual">
+              <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1213612402?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="BuildingDuck"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+          </ul>
+        </div>
+
+        <!-- タイトル・メタ情報 -->
+        <div class="p-about__group u-fade-in">
+          <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;">Building&thinsp;Duck</h2>
+          <p style="font-size: 1rem; margin-bottom: 15px;">アヒル×積み木のCGアニメーション</p>
+          <ul class="p-about__tags p-about__list--muted">
+            <li>#3DCG&nbsp;#Animation</li>
+          </ul>
+        </div>
+
+        <!-- 概要 -->
+        <div class="p-about__group u-fade-in">
+          <h3>概要</h3>
+          <p>シュールさと可愛らしさの融合をテーマに、アヒルと積み木を独自の視点で組み合わせた作品です。 最後には気だるそうな表情をしたアヒルの顔にズームし、視聴者にクスッと笑ってもらえるような映像に仕上げました。</p>
+        </div>
+        
+        <div class="p-about__group u-fade-in">
+          <h3>成果物仕様</h3>
+          <ul class="p-about__list">
+            <li><strong>映像：</strong>アスペクト比&thinsp;16:9&thinsp;／&thinsp;長さ&thinsp;18s</li>
+          </ul>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>詳細</h3>
+          <ul class="p-about__list">
+            <li><strong>業務内容：</strong>3DCG演習</li>
+            <li><strong>使用ツール：</strong>Blender,&nbsp;Premire&thinsp;Pro</li>
+            <li><strong>制作期間：</strong>制作期間：2022.09.01 - 2022.09.29</li>
+          </ul>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <div class="wrapper">
+    <footer>
+      <p>&copy;2026&nbsp;窓鳥&thinsp;/&thinsp;MADORI</p>
+    </footer>
+  </div>
+
+</body>
+</html>

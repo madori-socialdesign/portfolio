@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* ==================================================
+   CSS Variables (共通変数)
+   ================================================== */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-text-gray: #606060;
+  --color-text-muted: #909090;
+  --color-text-dark: #505050;
+  --color-border: #d8d8d8;
+  --color-stalker: rgba(1, 66, 53, 0.8);
+  --font-family: "Inter", "Noto Sans", sans-serif;
+  --font-weight: 400;
+  --font-style: normal;
+  --header-height: 55px;
+}
+
+/* ==================================================
+   Reset & Base (全体リセットと基本設定)
+   ================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 960px;
+  background: var(--color-white);
+  font-size: 1rem;
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none; 
+  color: var(--color-text-brack);
+  transition: color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.8rem;
+  letter-spacing: 0.05rem;
+}
+
+/* ==================================================
+   Animations (共通アニメーション)
+   ================================================== */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.u-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+/* ==================================================
+   Utility Classes (共通ユーティリティ)
+   ================================================== */
+.kerning {
+    letter-spacing: -0.5em;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+/* --- レスポンシブ (960px以下) --- */
+@media (max-width: 960px) {
+  body {
+    min-width: 375px;
+  }
+}

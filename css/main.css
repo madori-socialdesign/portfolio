@@ -1,0 +1,760 @@
+@charset "UTF-8";
+
+/* ==================================================
+   Components (共通パーツ)
+   ================================================== */
+.c-btn {
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1.5px solid var(--color-black);
+  width: 140px;
+  height: 40px;
+  color: var(--color-black);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.c-btn:hover,
+.c-btn.is-active {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+@media (max-width: 1024px) {
+  .c-btn--small {
+    width: 100px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ==================================================
+   Layouts (共通レイアウト)
+   ================================================== */
+.l-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.l-container--narrow {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.l-grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.l-grid img {
+  width: 100%;
+  height: auto;
+  border: 1.5px solid var(--color-border);
+}
+
+@media (max-width: 600px) {
+  .l-grid--wrap {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .l-grid--wrap > div {
+    width: 30%;
+  }
+}
+
+.l-divider {
+  margin: 150px 0;
+  border: none;
+  border-top: 1.5px solid var(--color-border);
+}
+
+
+/* ==================================================
+   Index Page (トップページ)
+   ================================================== */
+
+.p-index-slider {
+  max-width: 100%;
+  margin: 6.5rem auto;
+  z-index: 1;
+}
+
+.bx-wrapper {
+  border: none;
+  margin-bottom: -20px;
+}
+
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: -100px auto;
+  display: grid;
+  place-items: center;
+}
+
+.slide-image {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+}
+
+#slideContainer-2 { display: none; }
+
+@media (max-width: 834px) {
+  #slideContainer-1 { display: none; }
+  #slideContainer-2 {
+    display: block;
+    width: 85%;
+  }
+}
+
+
+/* ==================================================
+   Index Page (インデックスページ)
+   ================================================== */
+ 
+body.index-page {
+  overflow: hidden;
+  height: 100vh;
+}
+ 
+.p-index-container {
+  width: 100%;
+}
+ 
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  width: 100%;
+}
+ 
+.hero-content-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hero-content-img img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  filter: blur(1.5px);
+}
+
+
+.hero-content-datetime {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+ 
+.hero-content-datetime__date {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+}
+ 
+.hero-content-datetime__time {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
+}
+ 
+.hero-content-datetime__tz {
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-left: 0.35em;
+}
+ 
+.hero-content-datetime__divider {
+  display: block;
+  width: calc(100% + 32px);
+  margin: 16px 0 0 -16px;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+ 
+.hero-content-datetime__weather {
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+ 
+@media (max-width: 767px) {
+  .hero-content-datetime__date {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
+  .hero-content-datetime__time {
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-content-datetime__divider {
+    width: calc(100% + 20px);
+    margin: 12px 0 0 -10px;
+  }
+
+  .hero-content-datetime__weather {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    gap: 6px;
+  }
+}
+
+.c-ripple-ring {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: -12px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.12);
+  filter: blur(0.4px);
+  pointer-events: none;
+  animation: ripple-ring-expand 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+ 
+@keyframes ripple-ring-expand {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+    border-width: 2px;
+  }
+  55% {
+    opacity: 0.22;
+  }
+  100% {
+    transform: scale(16);
+    opacity: 0;
+    border-width: 0.5px;
+  }
+}
+
+.c-ripple-glow {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  margin-left: -70px;
+  margin-top: -70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: ripple-glow-fade 1s ease-out forwards;
+}
+ 
+@keyframes ripple-glow-fade {
+  0% {
+    transform: scale(0.25);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.c-water-filter-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+ 
+.curtain {
+  position: relative;
+  display: inline-block;
+}
+ 
+.curtain span {
+  opacity: 0;           
+  display: inline-block;
+}
+ 
+@media screen and (max-width: 767px) {
+  .hero-container {
+    flex-direction: column;
+  }
+}
+
+
+/* ==================================================
+   About Page (アバウトページ)
+   ================================================== */
+.p-about {
+  margin-top: 100px;
+}
+
+.p-about__visual {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.p-about__visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.p-about__content {
+  margin-bottom: 300px;
+}
+
+.p-about__group {
+  margin-bottom: 60px;
+}
+
+.p-about__group p {
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+.p-en-about__group {
+  margin-bottom: 60px;
+}
+
+.p-en-about__group p {
+  margin-bottom: 8px;
+  text-align: justify;
+  line-height: 1.75;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+.p-about__name-wrap {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.p-about__name-wrap p {
+  font-size: 0.8em;
+  margin: 0.25rem 0 0 0;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  padding: 0.2rem 0 0 0.6rem;
+}
+
+.p-about__name-main {
+  margin-bottom: 0;
+}
+
+.p-about__list {
+  color: var(--color-black);
+}
+
+.p-about__list--muted {
+  color: var(--color-text-gray);
+}
+
+.p-about__list li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 428px) {
+  .p-about { margin-top: 80px; }
+  .p-about__content { margin-bottom: 200px; }
+}
+
+
+/* ==================================================
+   Works Page (WORKSページ)
+   ================================================== */
+.p-works {
+  margin-top: 150px;
+  margin-bottom: 120px;
+}
+
+.p-works__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列 */
+  gap: 30px; /* カード同士の隙間 */
+}
+
+.p-works__card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  transition: .2s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.p-works__image {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  padding: clamp(7px, 1vw, 12px);
+  background-color: #ffffff;
+}
+
+.p-works__card:hover{
+  transform: translateY(4px);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.p-works__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-works__card:hover .p-works__mask {
+  opacity: 1;
+}
+
+/* --- 追加・変更部分 --- */
+.p-works__caption {
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+  padding: 0 15px; 
+}
+
+.p-works__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.p-works__subtitle,
+.p-works__category {
+  font-size: 0.75rem; 
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .p-works__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.p-about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+@media (max-width: 428px) {
+  .p-about__tags {
+    flex-direction: column; 
+    gap: 8px;               
+  }
+}
+
+
+/* ==================================================
+   Projects Page (プロジェクト)
+   ================================================== */
+.p-project {
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.p-project__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.p-project__outline {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-project__visual {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-project__visual img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1.5px solid var(--color-border);
+  margin-bottom: 20px;
+}
+
+.p-project__logo img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.p-project__caption {
+  color: var(--color-text-gray);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .p-project__inner { flex-direction: column-reverse; margin-bottom: 150px; }
+  .p-project__visual,
+  .p-project__outline { width: 100%; align-items: center; }
+  .p-project__logo img { height: 37px; }
+  .p-project__caption { font-size: 0.9rem; }
+}
+
+
+/* ==================================================
+   Gallery Page (ギャラリー)
+   ================================================== */
+.p-gallery { 
+  margin-top: 100px;
+  margin-bottom: 100px; 
+}
+
+.p-gallery__controls {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.p-gallery__grid {
+  columns: 3;
+  padding: 15px 0 0;
+  margin-top: 15px;
+}
+
+.p-gallery__grid li {
+  margin-bottom: 15px;
+}
+
+.p-gallery__grid img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  padding: clamp(7px, 1vw, 12px);
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  transition: .2s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.p-gallery__grid img:hover {
+  transform: translateY(4px);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 1200px) {
+  .p-gallery { margin-top: 80px; margin-bottom: 80px; }
+  .p-gallery__grid { columns: 3; padding: 15px 0 0; }
+}
+@media only screen and (max-width: 900px) {
+  .p-gallery__grid { columns: 3; padding: 15px 0 0; }
+}
+@media only screen and (max-width: 700px) {
+  .p-gallery__grid { columns: 2; }
+}
+@media only screen and (max-width: 428px) {
+  .p-gallery__grid { columns: 1; padding: 10px 0 0; }
+}
+
+/* 狭いレイアウト用の2列グリッド */
+.p-gallery__grid--2col {
+  columns: 2 !important;
+}
+
+@media only screen and (max-width: 428px) {
+  .p-gallery__grid--2col {
+    columns: 1 !important;
+  }
+}
+
+/* --- Lightbox 全体の設定 --- */
+.lum-lightbox {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.lum-lightbox.lum-open {
+  margin-top: 0%;
+}
+
+.lum-lightbox-inner{
+  margin-top: 5%;
+}
+
+.lum-lightbox-inner img {
+  max-width: 80% !important;
+  max-height: 80% !important;
+  object-fit: contain;
+  background-color: var(--color-white);
+}
+
+.lum-gallery-button {
+  width: 40px;
+  height: 60px;
+}
+
+.lum-previous-button {
+  left: 0;
+}
+
+.lum-next-button {
+  right: 2.5px;
+}
+
+.lum-gallery-button:after {
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  border-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.lum-previous-button:after {
+  left: 50%;
+}
+
+.lum-next-button:after {
+  right: 50%;
+}
+
+/* ホバー時の矢印の色（少し濃くする） */
+.lum-gallery-button:hover:after {
+  border-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+/* --- 閉じるボタン --- */
+.lum-close-button {
+  opacity: .5; /* デフォルトだと薄すぎる場合があるので少し上げました */
+  position: absolute;
+  right: 7%;
+  top: 80px;
+  width: 35px;
+  height: 35px;
+}
+
+.lum-close-button:before,
+.lum-close-button:after {
+  background-color: rgba(0, 0, 0, 1) !important;
+}
+
+.lum-close-button:hover {
+  opacity: 1;
+}
+
+.lum-fullscreen-btn {
+  position: absolute;
+  top: 77px;
+  left: 7%;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.lum-fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+
+/* ==================================================
+   Google プログラマブル検索エンジンのカスタマイズ
+   ================================================== */
+/* 全体の背景と枠線をリセットし、フォントをサイトに合わせる */
+.gsc-control-cse {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-family: var(--font-family) !important;
+}
+
+.gsc-webResult.gsc-result {
+  border-bottom: 1px solid var(--color-border) !important;
+  padding-bottom: 15px !important;
+  padding-top: 15px !important;
+}
+
+.gsc-result .gs-title,
+.gsc-result .gs-title * {
+  color: var(--color-black) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.gsc-result .gs-title:hover,
+.gsc-result .gs-title *:hover {
+  color: var(--color-text-muted) !important;
+}
+
+.gs-webResult.gs-result .gs-snippet {
+  color: var(--color-text-dark) !important;
+  line-height: 1.8rem !important;
+}
+
+.gcse-searchresults-only {
+  margin-top: 20px;
+}

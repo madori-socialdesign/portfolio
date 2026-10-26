@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fenestralism｜Kota</title>
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <div id="js-mouse-stalker" class="c-mouse-stalker"></div>
+
+  <header class="l-header">
+    <div class="l-header__inner">
+      
+      <h1 class="l-header__logo">
+        <a href="index.html">
+          <span class="l-header__logo-main">窓鳥</span>
+          <span class="l-header__logo-sub">MADORI</span>
+        </a>
+      </h1>
+
+      <nav class="p-global-nav" aria-label="メインナビゲーション">
+        <ul class="p-global-nav__pc-list">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="works.html" class="is-current">WORKS</a></li>
+          <li><a href="photo.html">PHOTO</a></li>
+          <li>
+            <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-label="Instagram"></i>
+            </a>
+          </li>
+<!-- ナビゲーション内の検索フォーム -->
+          <li class="p-global-nav__search">
+            <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+            <form class="search-form" action="search.html" method="get">
+              <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+              <input type="text" name="q" class="search-input" placeholder="Search..." required>
+              <button type="submit" class="search-button">
+                <i class="fas fa-search" aria-label="検索"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+
+        <div id="js-sp-menu" class="p-global-nav__sp-wrapper">
+          <ul class="p-global-nav__sp-list">
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="works.html">WORKS</a></li>
+            <li><a href="photo.html">PHOTO</a></li>
+            <li>
+              <a href="https://www.instagram.com/054kotak054/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+              </a>
+            </li>
+            <!-- ナビゲーション内の検索フォーム -->
+            <li class="p-global-nav__search">
+              <!-- action に検索結果ページのURL（またはファイル名）を指定 -->
+              <form class="search-form" action="search.html" method="get">
+                <!-- name="q" はそのまま（Google検索のデフォルトクエリ名） -->
+                <input type="text" name="q" class="search-input" placeholder="Search..." required>
+                <button type="submit" class="search-button">
+                  <i class="fas fa-search" aria-label="検索"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button type="button" id="js-hamburger" class="p-hamburger" aria-controls="js-sp-menu" aria-expanded="false" aria-label="メニューを開閉する">
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+        <span class="p-hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="l-main">
+    <article class="p-about l-container--narrow">
+      <div class="p-about__content">
+        
+        <!-- メインビジュアル（スライダー） -->
+        <div class="p-about__visual u-fade-in">
+          <ul class="slider">
+            <li><img src="images/works/fenestralism/fenestralism-slider-01.webp"></li>
+          </ul>
+        </div>
+        
+        <!-- タイトル・メタ情報 -->
+        <div class="p-about__group u-fade-in">
+          <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 10px;">Fenestralism</h2>
+          <p style="font-size: 1rem; margin-bottom: 30px;">「窓的思考」による曖昧さの価値の再考</p>
+          <ul class="p-about__tags p-about__list--muted">
+            <li>#SocialDesign</li>
+            <li>#ConceptualStudy</li>
+            <li>#Photography</li>
+          </ul>
+        </div>
+
+        <!-- 概要 -->
+        <div class="p-about__group u-fade-in">
+          <h3>概要</h3>
+          <p>本研究は、窓の「透過・反射」が生む視座の揺らぎを曖昧さの象徴として捉え、新概念Fenestralismを提唱しました。合理性の追求で失われた「余白」を許容し、人々の思考力を取り戻す試みです。</p>
+        </div>
+
+        <!-- 成果物仕様・作品詳細 -->
+        <div class="p-about__group u-fade-in">
+          <h3>成果物仕様</h3>
+          <ul class="p-about__list">
+            <li><strong>論文：</strong>80p.程度</li>
+            <li><strong>写真（視覚資料）：</strong>A3, 7枚</li>
+          </ul>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>作品詳細</h3>
+          <ul class="p-about__list">
+            <li><strong>科目名：</strong>修了研究</li>
+            <li><strong>使用ツール：</strong>InDesign,&nbsp;Illustrator,&nbsp;Photoshop,&nbsp;Lightroom</li>
+            <li><strong>制作期間：</strong>2024.04 - 2025.12</li>
+          </ul>
+        </div>
+
+        <!-- 本文セクション -->
+        <div class="p-about__group u-fade-in">
+          <h3>背景</h3>
+          <p>現代社会では即時性や明快さが最優先され、立場や結論を迅速に提示することが前提となっています。その結果、曖昧さや逡巡といった状態は許容されにくくなり、複雑な課題が単純な二択へと矮小化され、分断が固定化する傾向にあります。</p>
+          <p>近年の資本主義の加速とグローバル化は、相互理解を支える制度設計や社会基盤の整備を置き去りにしたまま進行してきました。その結果、本来であれば社会全体で調整すべき摩擦が、差別や排外主義といった歪みとなって表出しています。</p>
+          <p>こうした構造的な歪みは、最終的に個人の負担として転嫁されます。生活の余裕を失った個人にとって、他者の複雑な背景を想像する力は損なわれ、安易な二項対立や即時的な断定が選好される状況に陥っているのです。</p>
+          <p>この波及は文化領域にも及んでいます。美術館における鑑賞体験でさえも、予約管理やSNSでの拡散を前提とした設計により「短時間消費」へと最適化されました。その結果、結論を急がず「曖昧さの中に留まる権利」は、公共的価値として扱われにくいのが現状です。</p>
+        </div>
+        
+        <div class="p-about__group u-fade-in">
+          <h3>目的</h3>
+          <p>本研究の目的は、「曖昧さ」や「揺らぎ」の受容を、多様性の尊重といった倫理的規範に委ねるのではなく、社会構造の一部として保持するための設計原理へと理論化し提示することにあります。 その中核概念として、窓が持つ「透過（他者への視線）」と「反射（自己の映り込み）」という二重性をモデル化した「Fenestralism（フェネストラリズム）」、すなわち「窓的思考」を提唱します。</p>
+          <p>これは、「他者／自分」「公／私」など二項の間に生じる視座の揺らぎやズレを、あらかじめ関係性の前提として組み込む枠組みです。本研究が目指すのは、道徳的な指針化や個人の我慢の称揚ではなく、揺らぎがあっても共存が破綻しないよう空間・制度・ふるまいを設計することです。</p>
+          <p>本研究により、曖昧さを抱えた関係維持が理想論ではなく、分断回避と生存のための現実条件であることを示します。</p>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3><em>Fenestralism</em>とは...</h3>
+          <p>本概念は、「曖昧さ」や「揺らぎ」の認識を肯定的に再評価する新概念です。</p>
+          <p>ラテン語の<em>fenestra</em>（＝窓）を語源としており、さらに<em>fenestra</em>に由来する英語の<em>fenestral</em>は、「窓の」「窓に関する」という意味で定着しています。このように派生語が存在することから、本名称は既存の言語的スキーマ（認知的な単語形成ルール）に則った類推的なものであり、その定着が期待できます。日本語では、意訳として「窓的思考」を提案します。</p>
+          <p>これは、ガラス窓の特性「透過（外部への視線）」と「反射（自己の映り込み）」の同時性をモデル化した概念です。光を通しつつ同時に像を映す窓は、「内と外」「主体と他者」「現実と虚像」などの二項対立の間を媒介し、固定的な視点を相対化する装置として機能します。</p>
+          <p>そもそも、日本文化には「行間を読む」「察する」といった、言語化されない部分に真意が宿るという曖昧さを肯定的に受け止める伝統的な価値観が存在します。その事例として取り上げたいのが、ドラマ『カルテット』（TBS, 2017）内での以下の台詞です。</p>
+          <p style="margin: 15px 0 5px; padding-left: 10px; border-left: 2px solid var(--color-border);"><em>「はっきりしない人って、はっきりしないはっきりした理由がある」</em></p>
+          <p class="p-about__list--muted" style="font-size: 0.85rem;">*1 坂元裕二, 『カルテット』, 2017, 第2話.</p>
+          <p>この台詞は、曖昧さが単なる無思考や優柔不断ではなく、他者への配慮や事情を含む状態であることを示唆しており、こうした文化的な感性を象徴しているものと言えます。</p>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>命名の戦略</h3>
+          <p>新概念の創出、命名に至った経緯は、フェルディナン・ド・ソシュールが記号論において定義した「シニフィアン（記号表現）」と「シニフィエ（記号内容）」という概念があります。言い換えれば、「名付け」によって世界の中からある事物が切り取られ、意味を伴って立ち上げる行為です。</p>
+          <p>例として、フランス語のpapillonが挙げられます。日本語では「蝶」と「蛾」を語彙上で区別するのに対し、papillonは両者をまとめて指す単語です。つまり、同じ対象であっても、言語体系が異なればシニフィアンの境界が変化し、それに伴いシニフィエの価値づけも変わります。日本語における「蝶＝優雅」「蛾＝不気味」という印象も、記号の恣意的な分節の産物にすぎません。</p>
+          <p>この事実は、「見え方」は固定的な本質ではなく、言語的文脈によって絶えず揺らぐものであることを示唆しています。よって本研究では、この「名付け」を社会的介入の一形態として位置づけます。</p>
+          <p>さらに、建築家の黒川紀章は以下のように述べています。</p>
+          <p style="margin: 15px 0 5px; padding-left: 10px; border-left: 2px solid var(--color-border);"><em>「観念とは違って、感覚には名付けられないし、説明されたことのないものがたくさんある。（中略）それでもなおかつ感覚について語ることがいま、重要なのだ。ある感覚に名をつけ、その輪郭を描いたり、歴史をたどりながら、その感覚の原点を探し求めるには、 深い共感と同時に、適度な反発による快い刺激がなくてはならない」</em></p>
+          <p class="p-about__list--muted" style="font-size: 0.85rem;">*2 黒川紀章, 黒川紀章著作集 批評・思想Ⅳ, 勉誠社, 2006, p.142.</p>
+          <p>このように名付けには、曖昧さを打ち出す概念として矛盾を伴う行為とも言えます。しかし、感覚の輪郭を描き出し、社会の中で共有可能な「刺激」として機能させるためには、あえて命名し、概念として提示するプロセスが不可欠であると考えました。</p>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>窓の特性</h3>
+          
+          <div style="margin-bottom: 30px;">
+            <p><strong>⑴窓のレイヤー構造</strong><br>
+            本研究では、窓を単なる境界線ではなく、内と外、自己と他者が視覚的に重なり合う「レイヤー構造」として捉えました。ガラス窓は、外の景色を見る透過性（社会との接続）と、ガラスに自分が映り込む反射性（自己への回帰）という、相反する事象を同時に引き起こし、視座の揺らぎが発生します。つまり、窓はその二重の要素を兼ね備える両義的な装置なのです。</p>
+            <div class="p-about__visual" style="margin-top: 15px;">
+              <img src="images/works/fenestralism/fenestralism-diagram-01.webp" alt="窓のレイヤー構造">
+            </div>
+          </div>
+
+          <div>
+            <p><strong>⑵窓枠による視覚の限定</strong><br>
+            窓枠による視覚の限定が「アモーダル補完（見えない部分を脳内で補うこと）」を促す点にも着目しました。これは視界を部分的に遮る、すなわち情報を制限することで、逆説的に想像の余地が生まれることを意味します。Fenestralismにおいて、窓枠は単なる制限ではなく、想像を喚起し活性化させる創造的な装置として機能するものとして定義しました。</p>
+            <div class="p-about__visual" style="margin-top: 15px;">
+              <img src="images/works/fenestralism/fenestralism-diagram-02.webp" alt="窓枠による視覚の限定">
+            </div>
+          </div>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>現代社会の分析</h3>
+          <ul class="p-about__list">
+            <li style="margin-bottom: 20px;"><strong>⑴効率主義と批評性の無害化</strong><br>
+            「タイパ（時間対効果）」の追求は、美術館における滞留や思索を「非効率」として排除し、鑑賞体験を短時間での消費へと最適化します。さらに、アンディ・ウォーホルや村上隆が提示した「境界の攪乱」といった批評的な文脈さえも捨象され、単なる消費しやすい記号へと無害化されてしまうのです。こうして本来、芸術が持っているはずの問いを立てる力が奪われています。</li>
+            
+            <li style="margin-bottom: 20px;"><strong>⑵過剰な共感と想像力の希薄化</strong><br>
+            SNSによる共感の数値化は、「わかりやすさ」への同調圧力を形成し、即時的な反応（＝報酬）が得られる表現への最適化を促します。これにより、共感しにくい複雑な背景や遠隔の他者への想像力が遮断されるだけでなく、内輪での共感を「正義」とした排他的な断罪、すなわち「共感の暴力」を生む土壌となっています。</li>
+            
+            <li style="margin-bottom: 20px;"><strong>⑶カテゴライズによる分断の固定化</strong><br>
+            推し活や性格診断等による属性のタグ化、あるいは政治的スタンスにおけるラベリングは、不安定な自己の輪郭を安定させるインフラとして機能する側面を持ちます。その反面で懸念されるのが、複雑な現実を「内／外」や「敵／味方」等の二項へと単純化し、他者を単一の属性へ閉じ込めてしまうリスクです。これは相互理解を「分類」へと置き換え、認識の更新や社会的な訂正を困難にしてしまいます。その結果として、分断を固定化させてしまう危険性が伴います。</li>
+          </ul>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>実装論</h3>
+          <ul class="p-about__list">
+            <li style="margin-bottom: 20px;"><strong>⑴マクロ実践：制度・公共圏</strong><br>
+            都市公園における「Park-PFI（公募設置管理制度）」は、行政・民間・利用者の領域を半透明に重ね合わせる設計といえます。これは、複数の眼差しが交差する状態（相互可視性）を、監視ではなく「安全と自由の資源」として活用するものです。</li>
+            
+            <li style="margin-bottom: 20px;"><strong>⑵ミクロ実践：個人のふるまい</strong><br>
+            散歩（予定調和からの逸脱）や複合型書店への滞在（緩やかな連帯）により効率主義から距離を置き、さらに音楽プレイリスト編集（文脈の再編）によってビッグデータによる統計的な合理化に抗う行為といえます。これらは本研究において、現代社会の「過剰な最適化」から意図的に距離を置くための実践として取り上げました。即時の判断を保留し、答えの出ない事態に耐える力、すなわち、ネガティブ・ケイパビリティを日常的に養います。</li>
+            
+            <li style="margin-bottom: 20px;"><strong>⑶鑑賞体験における実践モデル：「ポケモン×工芸展」</strong><br>
+            本展は、消費されやすい「情報（キャラクター）」に対し、人間国宝らの手による「物質（工芸）」を衝突させました。工芸特有の物質の強度によって視線を強制的に滞留させ、安易な消費を拒む批評的な場を創出します。これは、知識がある者しか楽しめないという従来の「美術の閉鎖性」を打破する試みでもあります。よって美術館におけるFenestralismの好適な実践例です。</li>
+          </ul>
+        </div>
+
+        <div class="p-about__group u-fade-in">
+          <h3>結論</h3>
+          <p><em>Fenestralism</em>は、曖昧さを無条件に肯定するだけの言説ではありません。曖昧さといった価値観は、差別や分断を防ぐための「制度やルールの明確さ（Hard）」があって初めて、「解釈や関係性の揺らぎ（Soft）」が安全に許容されます。</p>
+          <p>目指すのは、同調的な「穴」や利己的な「鏡」に陥ることなく、社会への接続（透過）と自己への回帰（反射）の双方を高く保ち続ける「窓」の領域です。これは、分断を回避し共存するための現実的な生存戦略であり、社会の中で曖昧さの価値をコモンセンスとして定着させる試みです。</p>
+          <div class="p-about__visual" style="margin-top: 15px;">
+            <img src="images/works/fenestralism/fenestralism-diagram-03.webp">
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <div class="wrapper">
+    <footer>
+      <p>&copy;2026&nbsp;窓鳥&thinsp;/&thinsp;MADORI</p>
+    </footer>
+  </div>
+
+</body>
+</html>
